@@ -29,7 +29,7 @@ export class DetailPage implements OnInit {
   constructor(private http: HttpClient, private route: ActivatedRoute, private toastController: ToastController) { }
 
   ngOnInit() {
-    // read parameter from web address
+    // read parameter from URL/route
     this.pokename = this.route.snapshot.paramMap.get('pokename');
     this.http.get<any>(this.url + this.pokename)
       .pipe(take(1))

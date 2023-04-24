@@ -10,7 +10,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "assets": "npx @capacitor/assets generate --assetPath src/assets",
+    "assets": "npx @capacitor/assets generate --assetPath src/assets && mv ./icons/* ./src/assets/icons/",
     "pwa": "npx http-server-spa www ./index.html 8100"
   },
   "private": true,
