@@ -13,7 +13,9 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-input label="Badge count" [clearInput]="true" type="number" [min]="0" [max]="9999" [(ngModel)]="badgeCount"></ion-input>
+  <ion-item>
+    <ion-input label="Badge count" [clearInput]="true" type="number" min="0" max="9999" [(ngModel)]="badgeCount"></ion-input>
+  </ion-item>
   <ion-button color="primary" expand="block" (click)="updateBadgeCount()">Update Badge</ion-button>
 
 </ion-content>
