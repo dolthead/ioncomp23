@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Badge } from '@awesome-cordova-plugins/badge/ngx';
+import { TextToSpeechAdvanced } from '@awesome-cordova-plugins/text-to-speech-advanced/ngx';
 
 @Component({
   selector: 'app-tab2',
@@ -9,8 +10,9 @@ import { Badge } from '@awesome-cordova-plugins/badge/ngx';
 export class Tab2Page {
 
   badgeCount = 3;
+  textToSpeak = 'Hello World';
 
-  constructor(private badge: Badge) {}
+  constructor(private badge: Badge, private tts: TextToSpeechAdvanced) {}
 
   updateBadgeCount() {
     // emit badge count event
@@ -23,6 +25,10 @@ export class Tab2Page {
     } else {
       this.badge.set(this.badgeCount);
     }
+  }
+
+  sayTheThing() {
+    this.tts.speak(this.textToSpeak);
   }
 
 }

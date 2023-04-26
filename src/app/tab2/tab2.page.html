@@ -17,5 +17,10 @@
     <ion-input label="Badge count" [clearInput]="true" type="number" min="0" max="9999" [(ngModel)]="badgeCount"></ion-input>
   </ion-item>
   <ion-button color="primary" expand="block" (click)="updateBadgeCount()">Update Badge</ion-button>
+  <br />
+  <ion-item>
+    <ion-input label="Text to speak" [clearInput]="true" [(ngModel)]="textToSpeak"></ion-input>
+  </ion-item>
+  <ion-button color="primary" expand="block" (click)="sayTheThing()">Say The Thing</ion-button>
 
 </ion-content>
