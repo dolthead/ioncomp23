@@ -7,8 +7,9 @@
     </ion-tab-button>
 
     <ion-tab-button tab="tab2">
-      <ion-icon aria-hidden="true" name="ellipse"></ion-icon>
-      <ion-label>Tab 2</ion-label>
+      <ion-badge color="danger" *ngIf="badgeCount">{{ badgeCount }}</ion-badge>
+      <ion-icon aria-hidden="true" name="logo-capacitor"></ion-icon>
+      <ion-label>Capacitor</ion-label>
     </ion-tab-button>
 
     <ion-tab-button tab="tab3">
